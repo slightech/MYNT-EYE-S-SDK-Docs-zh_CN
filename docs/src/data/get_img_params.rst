@@ -3,7 +3,13 @@
 获取图像标定参数
 ==================
 
-通过 API 的 ``GetIntrinsics()`` ``GetExtrinsics()`` 函数，就可以获取当前打开设备的图像标定参数。
+通过 API 的 ``GetIntrinsics()`` ``GetExtrinsics()`` 函数，就可以获取当前打开设备的图像标定参数和相机使用的模型。
+
+.. tip::
+  参数的具体含义可以参考 ``tools/writer/config`` 下的参数文件，其中
+  S2100/S210A 对应的相机参数在 ``tools/writer/config/S210A``
+  S1030 对应的相机参数在  ``tools/writer/config/S1030``
+  equidistant表示等距模型，pinhole表示针孔模型
 
 参考代码片段：
 

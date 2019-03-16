@@ -15,7 +15,7 @@
 双目样例
 ---------
 
-* 按照 `ROS-StereoCalibration <http://wiki.ros.org/camera_calibration/Tutorials/StereoCalibration>`_ 或 OpenCV 校准双目摄像头，并在 ``<ORB_SLAM2>/config/mynteye_stereo.yaml`` 中更新参数。
+* 按照 `ROS-StereoCalibration <http://wiki.ros.org/camera_calibration/Tutorials/StereoCalibration>`_ 或 OpenCV 校准双目摄像头，并在 ``<ORB_SLAM2>/config/mynteye_s_stereo.yaml`` 中更新参数。
 
 * 运行脚本 ``build.sh`` ：
 
@@ -28,7 +28,7 @@
 
 .. code-block:: bash
 
-  ./Examples/Stereo/stereo_mynt ./Vocabulary/ORBvoc.txt ./config/mynteye_stereo.yaml true /mynteye/left/image_raw /mynteye/right/image_raw
+  ./Examples/Stereo/stereo_mynt_s ./Vocabulary/ORBvoc.txt ./config/mynteye_s_stereo.yaml true /mynteye/left/image_raw /mynteye/right/image_raw
 
 
 ROS 下创建单目和双目节点
@@ -47,32 +47,25 @@ ROS 下创建单目和双目节点
   chmod +x build_ros.sh
   ./build_ros.sh
 
-Mono_ROS 例子
-~~~~~~~~~~~~~~
-
-  * 在 ``<ORBSLAM2>/config/mynteye_mono.yaml`` 里更新 ``distortion_parameters`` 和 ``projection_parameters`` 参数
-
-.. code-block:: bash
-
-  cd MYNT-EYE-S-SDK
-
-  ./samples/_output/bin/tutorials/get_img_params
-
-这时获得针孔模型下 ``distortion_parameters`` 和 ``projection_parameters`` 参数，更新到 ``<ORBSLAM2>/config/mynteye_mono.yaml`` 中。
-
-  * 运行 ORB_SLAM2 ``Mono_ROS`` 例子
-
-.. code-block:: bash
-
-  rosrun ORB_SLAM2 mynteye_mono ./Vocabulary/ORBvoc.txt ./config/mynteye_mono.yaml /mynteye/left/image_raw
 
 Stereo_ROS 例子
 ~~~~~~~~~~~~~~~~
 
-  * 按照 `ROS-StereoCalibration  <http://wiki.ros.org/camera_calibration/Tutorials/StereoCalibration>`_ 或 OpenCV 校准双目摄像头，并在 ``<ORB_SLAM2>/config/mynteye_stereo.yaml`` 中更新参数。
+  * 按照 :ref:`slam_okvis` 中的``获取相机校准参数`` 得到 ``distortion_parameters`` 和 ``projection_parameters`` 参数，并在 ``<ORB_SLAM2>/config/mynteye_s_stereo.yaml`` 中更新参数。
 
   * 运行 ORB_SLAM2 ``Stereo_ROS`` 例子
 
+1.运行mynteye节点
+
 .. code-block:: bash
 
-  rosrun ORB_SLAM2 ros_mynteye_stereo ./Vocabulary/ORBvoc.txt ./config/mynteye_stereo.yaml true /mynteye/left/image_raw /mynteye/right/image_raw
+  cd [path of mynteye-s-sdk]
+  make ros
+  source ./wrappers/ros/devel/setup.bash
+  roslaunch mynt_eye_ros_wrapper mynteye.launch
+
+2.打开另一个命令行运行ORB_SLAM2
+
+.. code-block:: bash
+
+  rosrun ORB_SLAM2 mynteye_s_stereo ./Vocabulary/ORBvoc.txt ./config/mynteye_s_stereo.yaml true /mynteye/left/image_raw /mynteye/right/image_raw

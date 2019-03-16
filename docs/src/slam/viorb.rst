@@ -9,7 +9,7 @@
 
 1. 下载 `MYNT-EYE-S-SDK <https://github.com/slightech/MYNT-EYE-S-SDK.git>`_ ， 安装 mynt_eye_ros_wrapper。
 2. 按照一般步骤安装 VIORB 。
-3. 更新相机参数到 ``<VIO>/config/config_mynteye.yaml``。
+3. 更新相机参数到 ``<VIO>/config/mynteye_s.yaml``。
 4. 运行 mynt_eye_ros_wrapper 和 VIORB 。
 
 安装 MYNT-EYE-VIORB-Sample.
@@ -17,7 +17,7 @@
 
 .. code-block:: bash
 
-  git clone -b mynteye-s https://github.com/slightech/MYNT-EYE-VIORB-Sample.git
+  git clone -b mynteye https://github.com/slightech/MYNT-EYE-VIORB-Sample.git
   cd MYNT-EYE-VIORB-Sample
 
 添加 ``Examples/ROS/ORB_VIO`` 路径到环境变量 ``ROS_PACKAGE_PATH`` 。打开 ``.bashrc`` 文件，在最后添加下面命令行。 ``PATH`` 为当前 ``MYNT-EYE-VIORB-Sample.`` 存放路径:
@@ -43,15 +43,26 @@
   cd MYNT-EYE-S-SDK
   ./samples/_output/bin/tutorials/get_img_params
 
-这时，可以获得针孔模型下的 ``distortion_parameters`` 和 ``projection_parameters`` 参数，然后在 ``<MYNT-EYE-VIORB-Sample>/config/mynteye.yaml`` 中更新。
+这时，可以获得针孔模型下的 ``distortion_parameters`` 和 ``projection_parameters`` 参数，然后在 ``<MYNT-EYE-VIORB-Sample>/config/mynteye_s.yaml`` 中更新。
+
+.. tip::
+
+  获取相机校准参数时可以看到相机模型，pinhole代表针孔模型，equidistant代表等距模型，如果相机为等距模型不能直接写入参数，需要自己标定针孔模型或者按照 :ref:`write_img_params` 写入SDK中的针孔模型参数来使用。
 
 运行 VIORB 和 mynt_eye_ros_wrapper
 --------------------------------------
 
+1.运行mynteye节点
+
 .. code-block:: bash
 
   roslaunch mynt_eye_ros_wrapper mynteye.launch
-  roslaunch ORB_VIO testmynteye.launch
+
+2.打开另一个命令行运行viorb
+
+.. code-block:: bash
+
+  roslaunch ORB_VIO testmynteye_s.launch
 
 最后，``pyplotscripts`` 下的脚本会将结果可视化。
 

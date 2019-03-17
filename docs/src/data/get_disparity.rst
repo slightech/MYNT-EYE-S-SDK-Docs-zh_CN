@@ -10,7 +10,7 @@
 另外，推荐使用插件计算深度：深度图效果会更好，并且运算速度更快。具体请参阅 :ref:`get_with_plugin` 。
 
 .. tip::
-  其中 SetDisparityComputingMethodType 方法用于改变视差计算方式,目前有 BM/SGBM 两种方式可供选择，sdk中默认使用SGBM。
+  其中 SetDisparityComputingMethodType 方法用于改变视差计算方式,目前有 BM/SGBM 两种方式可供选择。
 
 参考代码片段：
 

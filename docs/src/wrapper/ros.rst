@@ -93,8 +93,6 @@ ROS 封装的文件结构，如下所示：
   <!-- <arg name="standard210a/brightness" default="120" /> -->
   ...
 
-
-
 .. code-block:: xml
 
   <arg name="gravity" default="9.8" />

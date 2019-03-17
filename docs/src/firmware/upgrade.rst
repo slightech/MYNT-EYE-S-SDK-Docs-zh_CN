@@ -11,7 +11,7 @@
 
   Firmwares/
   ├─Checksum.txt                 # file checksum
-  ├─MYNTEYE_S_2.2.0.img      # firmware
+  ├─MYNTEYE_S_2.3.0.img      # firmware
   ├─...
   └─setup.zip                    # MYNTEYE TOOL zip
 
@@ -21,7 +21,7 @@
 --------
 
 * 下载并解压 ``setup.zip``。
-* 下载固件，如 ``MYNTEYE_S_2.2.0.img`` 。
+* 下载固件，如 ``MYNTEYE_S_2.3.0.img`` 。
 
   * 请见 :ref:`firmware_applicable` 选择适合当前 SDK 版本的固件。
   * 请见 ``Checksum.txt`` 找到下载固件的校验码，如下获取并比对：
@@ -86,7 +86,7 @@
 
 .. image:: ../../images/firmware_update_westbridge.png
 
-* 以win 10 64位默认安装路径为例，需要选择的文件夹为 ``C:\Program Files (x86)\slightech\MYNT EYE Camera Tool\wlh\x64`` 。
+* 以win 10 64位默认安装路径为例，需要选择的文件夹为 ``C:\Program Files (x86)\slightech\MYNT EYE TOOL 2.0\WestBridge_driver\wlh\x64`` 。
 
 * 安装驱动成功之后，可以在设备管理器中找到 ``Cypress USB BootLoader`` 设备。
 

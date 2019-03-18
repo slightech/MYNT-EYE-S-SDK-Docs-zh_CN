@@ -71,7 +71,7 @@ ROS 封装的文件结构，如下所示：
   # s2100/s210a 修改分辨率/帧率参数
   <arg name="request_index" default="$(arg index_s2_2)" />
 
-  # s1030 修改分辨率/imu频率等
+  # s1030 修改帧率/imu频率等
   <!-- standard/frame_rate range: {10,15,20,25,30,35,40,45,50,55,60} -->
   <arg name="standard/frame_rate" default="-1" />
   <!-- <arg name="standard/frame_rate" default="25" /> -->

@@ -1,7 +1,7 @@
 .. _mynteye:
 
-MYNT® EYE
-=========
+MYNT® EYE 产品介绍
+==================
 
 .. toctree::
 
@@ -10,3 +10,4 @@ MYNT® EYE
    imu_coord_s1030
    surface_s2100
    imu_coord_s2100
+   attachment

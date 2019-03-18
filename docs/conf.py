@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'MYNT® EYE S SDK'
-copyright = '2018, MYNTAI'
+copyright = '2019, MYNTAI'
 author = 'MYNTAI'
 
 # The short X.Y version

@@ -5,7 +5,7 @@
 
 
 在 MYNT® EYE 上运行 VINS-Fusion，请依照这些步骤：
-------------------------------------------------
+--------------------------------------------------
 
 1. 下载 `MYNT-EYE-S-SDK <https://github.com/slightech/MYNT-EYE-S-SDK.git>`_ 及安装 mynt_eye_ros_wrapper。
 2. 按照一般步骤安装 VINS-Fusion 。

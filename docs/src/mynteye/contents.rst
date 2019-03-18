@@ -11,4 +11,5 @@ MYNT® EYE 产品介绍
    spec_s1030
    surface_s2100
    imu_coord_s2100
+   spec_s2100
    assembly

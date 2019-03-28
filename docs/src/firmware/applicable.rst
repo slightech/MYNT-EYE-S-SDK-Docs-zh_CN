@@ -26,6 +26,6 @@ MYNTEYE_S2100_1.1.img            2.3.4
 .. attention::
   请先确认相机型号，然后使用对应的固件。
 
-``Firmwares`` 表明固件文件名称。其在 `MYNTEYE_BOX <http://doc.myntai.com/mynteye/s/download>`_  的 ``Firmwares`` 目录内。
+``Firmwares`` 表明固件文件名称。其在 `MYNTEYE_BOX(点此下载) <http://doc.myntai.com/mynteye/s/download>`_  的 ``Firmwares`` 目录内。
 
 ``SDK Version`` 表明该固件适配的 SDK 版本，括号内指可用版本范围。

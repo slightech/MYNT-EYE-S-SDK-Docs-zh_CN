@@ -55,4 +55,4 @@ s210a：
 
 样例程序按 ``ESC/Q`` 结束。
 
-完整代码样例，请见 `imu_range.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/control/iic_address.cc >`_ 。
+完整代码样例，请见 `iic_address.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/control/iic_address.cc >`_ 。

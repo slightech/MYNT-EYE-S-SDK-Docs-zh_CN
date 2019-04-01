@@ -5,14 +5,14 @@
 
 固件升级，需要使用我们提供的固件升级程序：MYNT EYE TOOL。
 
-固件及MYNT EYE TOOL的安装包，都在 `MYNTEYE_BOX <http://doc.myntai.com/mynteye/s/download>`_ 的 ``Firmwares`` 目录内。文件结构如下：
+固件及MYNT EYE TOOL的安装包，都在 `MYNTEYE_BOX(点此下载) <http://doc.myntai.com/mynteye/s/download>`_ 的 ``Firmwares`` 目录内。文件结构如下：
 
 .. code-block:: none
 
   Firmwares/
   ├─Checksum.txt                 # file checksum
   ├─MYNTEYE_S_2.4.0.img          # S1030 firmware
-  ├─MYNTEYE_S2100_1.1.img        # S2100 firmware
+  ├─MYNTEYE_S2100_1.2.img        # S2100 firmware
   ├─...
   └─setup.zip                    # MYNTEYE TOOL zip
 

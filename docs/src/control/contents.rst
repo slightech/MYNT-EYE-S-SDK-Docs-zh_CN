@@ -11,3 +11,4 @@ MYNT® EYE 控制
    manual_exposure
    infrared
    imu_low_pass_filter
+   iic_address

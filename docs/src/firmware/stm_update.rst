@@ -19,7 +19,7 @@
 .. image:: ../../images/stmupdate.png
    :width: 60%
 
-* 在打开的文件选择框里，选择要升级的固件 ``MYNTEYE-S210x-auxiliary-chip-v1.0.bin``，开始升级。
+* 在打开的文件选择框里，选择要升级的固件 ``MYNTEYE-S210x-auxiliary-chip-v1.3.bin``，开始升级。
 
 * 升级完成后，会显示升级结束.
 

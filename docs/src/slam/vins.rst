@@ -70,4 +70,4 @@
 
   cd ~/catkin_ws
   roslaunch vins_estimator mynteye_s.launch
-  roslaunch vins_estimator mynteye_s2100.launch   #使用S2100相机时
+

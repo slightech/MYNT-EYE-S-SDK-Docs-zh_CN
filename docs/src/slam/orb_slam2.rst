@@ -13,15 +13,18 @@
 
 安装依赖
 ---------
-sudo apt-get -y install libglew-dev cmake
-cd ~
-git clone https://github.com/stevenlovegrove/Pangolin.git
-cd Pangolin
-mkdir build
-cd build
-cmake ..
-cmake --build .
-sudo make install
+
+.. code-block:: bash
+
+  sudo apt-get -y install libglew-dev cmake
+  cd ~
+  git clone https://github.com/stevenlovegrove/Pangolin.git
+  cd Pangolin
+  mkdir build
+  cd build
+  cmake ..
+  cmake --build .
+  sudo make install
 
 
 ROS 下创建双目节点

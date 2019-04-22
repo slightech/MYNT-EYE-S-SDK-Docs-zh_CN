@@ -51,9 +51,17 @@ ROS 封装的文件结构，如下所示：
   <sdk>/wrappers/ros/
   ├─src/
   │  └─mynt_eye_ros_wrapper/
+  │     ├─config/
+  │     │  ├─device/
+  │     │     ├─standard.yaml   # S1030
+  │     │     └─standard2.yaml  # S2100/S210A
+  │     │  ├─laserscan/
+  │     │  ├─process/
+  │     │  └─...
   │     ├─launch/
   │     │  ├─display.launch
   │     │  └─mynteye.launch
+  │     │  └─...
   │     ├─msg/
   │     ├─rviz/
   │     ├─src/
@@ -64,34 +72,36 @@ ROS 封装的文件结构，如下所示：
   │     └─package.xml
   └─README.md
 
-其中 ``mynteye.launch`` 里，可以配置发布的 topics 与 frame_ids 、决定启用哪些数据、以及设定控制选项。其中，``gravity`` 请配置成当地重力加速度。
+其中 ``mynteye.launch`` 里，可以配置发布的 topics 与 frame_ids 、决定启用哪些数据, ``standard.yaml``(standard2.yaml为S2100/S210A的配置文件) 中可以设定控制选项等。其中，``gravity`` 请配置成当地重力加速度。
 
+standard.yaml/standard2.yaml
 .. code-block:: xml
 
   # s2100/s210a 修改分辨率/帧率参数
-  <arg name="request_index" default="$(arg index_s2_2)" />
+  standard2/request_index: 2
 
   # s1030 修改帧率/imu频率等
-  <!-- standard/frame_rate range: {10,15,20,25,30,35,40,45,50,55,60} -->
-  <arg name="standard/frame_rate" default="-1" />
-  <!-- <arg name="standard/frame_rate" default="25" /> -->
+  # standard/frame_rate range: {10,15,20,25,30,35,40,45,50,55,60}
+  standard/frame_rate: -1
+  # standard/frame_rate: 25
 
-  <!-- standard/imu_frequency range: {100,200,250,333,500} -->
-  <arg name="standard/imu_frequency" default="-1" />
-  <!-- <arg name="standard/imu_frequency" default="200" /> -->
-  ...
+  # standard/imu_frequency range: {100,200,250,333,500}
+  standard/imu_frequency: -1
+  # standard/imu_frequency: 200
 
   # s2100 修改曝光时间等
-  <!-- standard2/brightness range: [0,240] -->
-  <arg name="standard2/brightness" default="-1" />
-  <!-- <arg name="standard2/brightness" default="120" /> -->
+  # standard2/brightness range: [0,240]
+  standard2/brightness: -1
+  # standard2/brightness: 120
   ...
 
   # s210a 修改曝光时间等
-  <!-- standard210a/brightness range: [0,240] -->
-  <arg name="standard210a/brightness" default="-1" />
-  <!-- <arg name="standard210a/brightness" default="120" /> -->
+  # standard210a/brightness range: [0,240]
+  standard210a/brightness: -1
+  # standard210a/brightness: 120
   ...
+
+mynteye.launch
 
 .. code-block:: xml
 

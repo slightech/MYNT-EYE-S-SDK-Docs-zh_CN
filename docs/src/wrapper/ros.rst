@@ -72,9 +72,10 @@ ROS 封装的文件结构，如下所示：
   │     └─package.xml
   └─README.md
 
-其中 ``mynteye.launch`` 里，可以配置发布的 topics 与 frame_ids 、决定启用哪些数据, ``standard.yaml``(standard2.yaml为S2100/S210A的配置文件) 中可以设定控制选项等。其中，``gravity`` 请配置成当地重力加速度。
+其中 ``mynteye.launch`` 里，可以配置发布的 topics 与 frame_ids 、决定启用哪些数据, ``standard.yaml`` (standard2.yaml为S2100/S210A的配置文件) 中可以设定控制选项等。其中，``gravity`` 请配置成当地重力加速度。
 
-standard.yaml/standard2.yaml
+standard.yaml/standard2.yaml:
+
 .. code-block:: xml
 
   # s2100/s210a 修改分辨率/帧率参数
@@ -101,7 +102,7 @@ standard.yaml/standard2.yaml
   # standard210a/brightness: 120
   ...
 
-mynteye.launch
+mynteye.launch:
 
 .. code-block:: xml
 

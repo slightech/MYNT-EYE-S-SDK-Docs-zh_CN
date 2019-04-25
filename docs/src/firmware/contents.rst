@@ -7,5 +7,5 @@ MYNT® EYE 固件
 
    applicable
    upgrade
-   stm_update
+   auxiliary_chip_update
    from_v1.rst

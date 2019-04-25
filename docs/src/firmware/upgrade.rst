@@ -1,9 +1,9 @@
 .. _firmware_upgrade:
 
-固件如何进行升级
+主芯片如何进行升级
 ==================
 
-固件升级，需要使用我们提供的固件升级程序：MYNT EYE TOOL。
+主芯片固件升级，需要使用我们提供的固件升级程序：MYNT EYE TOOL。
 
 固件及MYNT EYE TOOL的安装包，都在 `MYNTEYE_BOX(点此下载) <http://doc.myntai.com/mynteye/s/download>`_ 的 ``Firmwares`` 目录内。文件结构如下：
 
@@ -25,10 +25,6 @@
 * 找到固件，如 ``MYNTEYE_S_2.4.0.img`` 。
 
   * 请见 :ref:`firmware_applicable` 选择适合当前 SDK 版本的固件。
-  * 请见 ``Checksum.txt`` 找到下载固件的校验码，如下获取并比对：
-
-    * 命令提示符（CMD）里运行 ``certutil -hashfile <*.img> MD5`` 。
-    * 校验码不正确的话，说明下载有误，请重新下载！
 
 安装MYNT EYE TOOL
 -----------------

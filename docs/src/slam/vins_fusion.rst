@@ -67,7 +67,7 @@
 
 .. code-block:: bash
 
-  cd ~/catkin_ws/src
+  cd ~/catkin_ws
   source ./devel/setup.bash
   roslaunch vins mynteye-s-stereo.launch  # Stereo fusion / Stereo+imu fusion
   # roslaunch vins mynteye-s-mono-imu.launch  # mono+imu fusion

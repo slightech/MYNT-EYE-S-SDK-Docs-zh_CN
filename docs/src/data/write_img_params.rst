@@ -11,10 +11,10 @@ SDK 提供了写入图像标定参数的工具 ``img_params_writer`` 。工具�
 
 .. code-block:: bash
 
-  ./tools/_output/bin/writer/img_params_writer tools/writer/config/img.params
+  ./tools/_output/bin/writer/img_params_writer tools/writer/config/S1030/img.params.equidistant
 
   # Windows
-  .\tools\_output\bin\writer\img_params_writer.bat tools\writer\config\img.params
+  .\tools\_output\bin\writer\img_params_writer.bat tools\writer\config\S1030\img.params.equidistant
 
 .. warning::
 

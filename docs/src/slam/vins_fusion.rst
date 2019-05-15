@@ -21,21 +21,28 @@
   wget https://raw.githubusercontent.com/oroca/oroca-ros-pkg/master/ros_install.sh && \
   chmod 755 ./ros_install.sh && bash ./ros_install.sh catkin_ws kinetic
 
-安装Ceres
+安装Docker
 ----------
 
 .. code-block:: bash
 
-  cd ~
-  git clone https://ceres-solver.googlesource.com/ceres-solver
-  sudo apt-get -y install cmake libgoogle-glog-dev libatlas-base-dev libeigen3-dev libsuitesparse-dev
-  sudo add-apt-repository ppa:bzindovic/suitesparse-bugfix-1319687
-  sudo apt-get update && sudo apt-get install libsuitesparse-dev
-  mkdir ceres-bin
-  cd ceres-bin
-  cmake ../ceres-solver
-  make -j3
-  sudo make install
+  sudo apt-get update
+  sudo apt-get install \
+      apt-transport-https \
+      ca-certificates \
+      curl \
+      gnupg-agent \
+      software-properties-common
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  sudo add-apt-repository \
+     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+     $(lsb_release -cs) \
+     stable"
+  sudo apt-get update
+  sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+然后通过 ``sudo usermod -aG docker $YOUR_USER_NAME`` 命令将账号加到 ``docker`` 组。如果遇到 ``Permission denied`` 错误，请登出后再重新登录。
+
 
 
 安装 MYNT-EYE-VINS-FUSION-Samples
@@ -43,12 +50,9 @@
 
 .. code-block:: bash
 
-  mkdir -p ~/catkin_ws/src
-  cd ~/catkin_ws/src
   git clone https://github.com/slightech/MYNT-EYE-VINS-FUSION-Samples.git
-  cd ..
-  catkin_make
-  source ~/catkin_ws/devel/setup.bash
+  cd MYNT-EYE-VINS-FUSION-Samples/docker
+  make build
 
 (如果安装失败，请尝试换一台系统干净的电脑或者重新安装系统与ROS)
 
@@ -67,9 +71,7 @@
 
 .. code-block:: bash
 
-  cd ~/catkin_ws
-  source ./devel/setup.bash
-  roslaunch vins mynteye-s-stereo.launch  # Stereo fusion / Stereo+imu fusion
-  # roslaunch vins mynteye-s-mono-imu.launch  # mono+imu fusion
-  # roslaunch vins mynteye-s2100-mono-imu.launch  # mono+imu fusion with mynteye-s2100
-  # roslaunch vins mynteye-s2100-stereo.launch  # Stereo fusion / Stereo+imu fusion with mynteye-s2100
+  cd path/to/this_repo/docker
+  ./run.sh mynteye-s/mynt_s1_stereo_config.yaml  # Stereo fusion
+  # ./run.sh mynteye-s2100/mynt_stereo_config.yaml # Stereo fusion with mynteye-s2100
+  # ./run.sh mynteye-s2100/mynt_stereo_imu_config.yaml # Stereo+imu fusion with mynteye-s2100

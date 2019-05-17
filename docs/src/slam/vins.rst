@@ -49,7 +49,7 @@
 
 .. code-block:: bash
 
-  git clone -b test_new_rep https://github.com/slightech/MYNT-EYE-VINS-Sample.git
+  git clone -b docker_feat https://github.com/slightech/MYNT-EYE-VINS-Sample.git
   cd MYNT-EYE-VINS-Sample/docker
   make build
 

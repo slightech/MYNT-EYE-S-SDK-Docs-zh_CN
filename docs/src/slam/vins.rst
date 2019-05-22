@@ -53,6 +53,8 @@
   cd MYNT-EYE-VINS-Sample/docker
   make build
 
+编译docker推荐16G以上内存，或者内存和虚拟内存加起来大于16G。
+
 (如果安装失败，请尝试换一台系统干净的电脑或者重新安装系统与ROS)
 
 在 MYNT® EYE 上运行 VINS-Mono
@@ -64,7 +66,7 @@
 
   cd (local path of MYNT-EYE-S-SDK)
   source ./wrappers/ros/devel/setup.bash
-  roslaunch mynt_eye_ros_wrapper mynteye.launch
+  roslaunch mynt_eye_ros_wrapper vins_mono.launch
 
 2.打开另一个命令行运行vins
 
@@ -72,4 +74,4 @@
 
   cd path/to/VINS-Mono/docker
   ./run.sh mynteye_s.launch
-
+  # ./run.sh mynteye_s2100.launch  # mono with s2100

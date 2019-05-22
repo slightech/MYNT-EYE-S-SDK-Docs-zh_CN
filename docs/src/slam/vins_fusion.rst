@@ -54,6 +54,8 @@
   cd MYNT-EYE-VINS-FUSION-Samples/docker
   make build
 
+编译docker推荐16G以上内存，或者内存和虚拟内存加起来大于16G。
+
 (如果安装失败，请尝试换一台系统干净的电脑或者重新安装系统与ROS)
 
 在 MYNT® EYE 上运行 VINS-FUSION
@@ -72,6 +74,6 @@
 .. code-block:: bash
 
   cd path/to/this_repo/docker
-  ./run.sh mynteye-s/mynt_s1_stereo_config.yaml  # Stereo fusion
+  ./run.sh mynteye-s/mynt_stereo_imu_config.yaml  # Stereo fusion
   # ./run.sh mynteye-s2100/mynt_stereo_config.yaml # Stereo fusion with mynteye-s2100
   # ./run.sh mynteye-s2100/mynt_stereo_imu_config.yaml # Stereo+imu fusion with mynteye-s2100

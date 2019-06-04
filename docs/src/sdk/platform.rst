@@ -8,7 +8,7 @@ SDK 是基于 CMake 构建的，用以跨 Linux, Windows 等多个平台。SDK�
 已测试可用的平台有：
 
 * Windows 10
-* Ubuntu 18.04 / 16.04 / 14.04
+* Ubuntu 18.04.1 / 16.04.6 / 14.04.5
 * Jetson TX1/TX2 / Xavier
 * firefly RK3399
 

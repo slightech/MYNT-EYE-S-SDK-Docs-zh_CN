@@ -15,7 +15,7 @@
 
   s2100/s210a有效值：
   
-  * 加速度计量程有效值（单位：g）： 6, 12, 24, 32 。
+  * 加速度计量程有效值（单位：g）： 6, 12, 24, 48 。
   * 陀螺仪量程有效值（单位：deg/s）： 250, 500, 1000, 2000, 4000 。
 
 参考代码片段：
@@ -50,7 +50,7 @@ s2100/s210a：
   if (!ok) return 1;
   api->ConfigStreamRequest(request);
 
-  // ACCELEROMETER_RANGE values: 6, 12, 24, 32
+  // ACCELEROMETER_RANGE values: 6, 12, 24, 48
   api->SetOptionValue(Option::ACCELEROMETER_RANGE, 6);
   // GYROSCOPE_RANGE values: 250, 500, 1000, 2000, 4000
   api->SetOptionValue(Option::GYROSCOPE_RANGE, 1000);

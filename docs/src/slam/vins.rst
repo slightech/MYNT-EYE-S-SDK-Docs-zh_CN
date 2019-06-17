@@ -72,6 +72,6 @@
 
 .. code-block:: bash
 
-  cd path/to/VINS-Mono/docker
+  cd path/to/MYNT-EYE-VINS-Sample/docker
   ./run.sh mynteye_s.launch
   # ./run.sh mynteye_s2100.launch  # mono with s2100

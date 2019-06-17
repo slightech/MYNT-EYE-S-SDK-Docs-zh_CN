@@ -73,7 +73,7 @@
 
 .. code-block:: bash
 
-  cd path/to/this_repo/docker
+  cd path/to/MYNT-EYE-VINS-FUSION-Samples/docker
   ./run.sh mynteye-s/mynt_stereo_imu_config.yaml  # Stereo fusion
   # ./run.sh mynteye-s2100/mynt_stereo_config.yaml # Stereo fusion with mynteye-s2100
   # ./run.sh mynteye-s2100/mynt_stereo_imu_config.yaml # Stereo+imu fusion with mynteye-s2100

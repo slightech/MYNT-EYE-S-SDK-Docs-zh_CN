@@ -1,4 +1,4 @@
-.. _sdk_install_ros:
+.. _content_InstallContents_install_ros:
 
 ROS 安装
 ==========

@@ -1,6 +1,6 @@
-.. _mynteye_surface_s1030:
+.. _content_product_surface_surface_s1030:
 
-MYNTEYE-S1030尺寸与结构
+MYNTEYE-S1030 尺寸与结构
 ==========================
 
 ============= ===========

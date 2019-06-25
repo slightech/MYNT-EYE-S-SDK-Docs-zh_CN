@@ -1,4 +1,4 @@
-.. _mynteye_spec_s1030:
+.. _content_product_surface_spec_s1030:
 
 S1030-IR-120/Mono 产品规格
 ==========================

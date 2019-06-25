@@ -1,4 +1,4 @@
-.. _attachment:
+.. _content_assembly:
 
 附件
 ==============

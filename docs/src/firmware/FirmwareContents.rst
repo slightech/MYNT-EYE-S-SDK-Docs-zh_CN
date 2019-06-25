@@ -1,3 +1,5 @@
+.. _content_FirmwareContents:
+
 固件说明
 ==================
 

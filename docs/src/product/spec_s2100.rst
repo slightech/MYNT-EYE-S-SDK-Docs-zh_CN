@@ -1,4 +1,4 @@
-.. _mynteye_spec_s2100:
+.. _content_product_surface_spec_s2100:
 
 S2100-146/Color 产品规格
 ==========================

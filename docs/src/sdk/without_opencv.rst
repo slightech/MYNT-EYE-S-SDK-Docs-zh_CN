@@ -1,4 +1,4 @@
-.. _sdk_without_opencv:
+.. _content_InstallContents_without_opencv:
 
 OpenCV 不依赖
 ===============

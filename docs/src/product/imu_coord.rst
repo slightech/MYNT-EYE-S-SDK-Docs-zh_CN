@@ -1,4 +1,6 @@
-IMU坐标系统
+.. _content_imu_coord:
+
+IMU 坐标系统
 ==================
 
 .. toctree::

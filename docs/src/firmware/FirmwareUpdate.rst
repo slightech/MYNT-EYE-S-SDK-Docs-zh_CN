@@ -1,3 +1,5 @@
+.. _content_FirmwareUpdate:
+
 升级固件
 ==================
 

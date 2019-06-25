@@ -1,3 +1,5 @@
+.. _content_InstallContents:
+
 安装使用
 ==================
 

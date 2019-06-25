@@ -1,4 +1,4 @@
-.. _sdk_source_install_ubuntu:
+.. _content_InstallContents_source_install_ubuntu:
 
 Ubuntu SDK 源码安装
 =====================

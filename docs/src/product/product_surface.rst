@@ -1,3 +1,5 @@
+.. _content_product_surface:
+
 外观
 ==================
 

@@ -1,9 +1,11 @@
-规格
+产品
 ==================
 
 .. toctree::
    :maxdepth: 2
 
-   spec_s1030
-   spec_s2100
-  
+   product_description
+   product_surface
+   specification
+   imu_coord
+   assembly

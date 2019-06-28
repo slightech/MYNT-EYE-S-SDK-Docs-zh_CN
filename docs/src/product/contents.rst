@@ -6,6 +6,6 @@
 
    product_description
    product_surface
-   specification
+   pro_intro
    imu_coord
    assembly

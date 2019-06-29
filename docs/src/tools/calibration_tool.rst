@@ -173,7 +173,7 @@ sudo dpkg -i 即可安装 deb 包。如下：
 
 * 首先，连接好 MYNT EYE S 相机。
 
-* 然后，终端里运行 mynteye-s-calibrator <标定板参数> 命令，
+* 然后，终端里运行 mynteye-s-calibrator <标定板参数> 命令，标定板参数需要根据使用的标定板来设置，参数说明见上
 
 .. image:: ../../images/calibration001.png
    :width: 60%

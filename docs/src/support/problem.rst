@@ -1,6 +1,6 @@
-FAQ
+常见问题
 ==================
 
-If you have problems using MYNT EYE, please first check the following docs：
+如果遇到相机使用问题, 请先查阅以下文档：
 
 http://support.myntai.com/hc/

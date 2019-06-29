@@ -1,4 +1,4 @@
-TECHNICAL SUPPORT
+技术支持
 ==================
 
 .. toctree::

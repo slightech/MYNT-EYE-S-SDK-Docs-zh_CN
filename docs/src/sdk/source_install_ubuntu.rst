@@ -100,7 +100,7 @@ Ubuntu SDK 源码安装
     # OpenCV_DIR is the directory where your OpenCVConfig.cmake exists
     export OpenCV_DIR=~/opencv
 
-  不然， CMake 会提示找不到 OpenCV 。如果不想依赖 OpenCV ，请阅读 :ref:`_content_InstallContents_without_opencv` 。
+  不然， CMake 会提示找不到 OpenCV 。如果不想依赖 OpenCV ，请阅读 :ref:`content_InstallContents_without_opencv` 。
 
 编译并安装：
 

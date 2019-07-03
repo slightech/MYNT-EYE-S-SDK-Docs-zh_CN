@@ -1,6 +1,6 @@
-.. _content_InstallContents_without_opencv:
+.. _sdk_without_opencv:
 
-OpenCV 不依赖
+OpenCV 说明
 ===============
 
 SDK 提供了三层接口，其 OpenCV 依赖情况如下：

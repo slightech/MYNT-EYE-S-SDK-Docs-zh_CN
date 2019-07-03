@@ -2,9 +2,8 @@ SDK
 =============
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
-   platform
-   InstallContents
-   ProjectContentsToDo
-   changelog
+   sdk_info
+   sdk_install
+   sdk_changelog

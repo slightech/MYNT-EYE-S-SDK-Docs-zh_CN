@@ -1,9 +1,7 @@
-.. _LogContents:
+.. _sdk_projects:
 
-更新日志
+工程引用
 ==================
 
 .. toctree::
    :maxdepth: 2
-
-   changelog

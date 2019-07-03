@@ -1,4 +1,4 @@
-.. _content_product_surface:
+.. _product_surface:
 
 外观
 ==================
@@ -8,4 +8,3 @@
 
    surface_s1030
    surface_s2100
-  

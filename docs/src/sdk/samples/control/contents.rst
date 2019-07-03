@@ -1,6 +1,6 @@
 .. _ctrl:
 
-MYNT® EYE 控制
+SDK 控制样例
 ==============
 
 .. toctree::

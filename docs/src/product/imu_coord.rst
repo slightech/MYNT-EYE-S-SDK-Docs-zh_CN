@@ -1,4 +1,4 @@
-.. _content_imu_coord:
+.. _product_imu_coord:
 
 IMU 坐标系统
 ==================
@@ -8,4 +8,3 @@ IMU 坐标系统
 
    imu_coord_s1030
    imu_coord_s2100
-  

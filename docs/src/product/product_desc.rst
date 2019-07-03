@@ -1,4 +1,4 @@
-.. _content_product_description:
+.. _product_desc:
 
 简介
 ==================

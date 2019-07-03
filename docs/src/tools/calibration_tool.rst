@@ -1,7 +1,7 @@
 .. _calibration_tool:
 
-MYNT EYE S 标定说明
-==========
+标定工具的使用
+==============
 
 
 介绍
@@ -15,7 +15,7 @@ MYNT EYE S 标定说明
 ====================  ====================  ====================
 平台                   架构                  不同依赖
 ====================  ====================  ====================
-Ubuntu 16.04 LTS      x64(amd64)            libopencv-dev 
+Ubuntu 16.04 LTS      x64(amd64)            libopencv-dev
 Ubuntu 16.04 LTS      x64(amd64)            ros-kinetic-opencv3
 ====================  ====================  ====================
 
@@ -31,22 +31,22 @@ Ubuntu 上提供的是 deb/ppa 安装包，名称上会区分架构、依赖和�
 
 其中，
 
-====================  ====================  ============================================================ 
-依赖标识               依赖包名                详细说明              
 ====================  ====================  ============================================================
-opencv-official       libopencv-dev          https://packages.ubuntu.com/xenial/libopencv-dev                                
-opencv-ros-kinetic    ros-kinetic-opencv3    http://wiki.ros.org/opencv3                                         
+依赖标识               依赖包名                详细说明
+====================  ====================  ============================================================
+opencv-official       libopencv-dev          https://packages.ubuntu.com/xenial/libopencv-dev
+opencv-ros-kinetic    ros-kinetic-opencv3    http://wiki.ros.org/opencv3
 ====================  ====================  ============================================================
 
 
 1.3 deb 工具包获取
 --------
 
-====================  ======================================================================== 
-获取方式                获取地址          
 ====================  ========================================================================
-百度网盘                https://pan.baidu.com/s/19rW0fPKUlQj6eldZpZFoAA    提取码: a6ps                          
-Google Drive           https://drive.google.com/open?id=1RsV2WEKAsfxbn-Z5nGjk5g3ml1UDEsDc                               
+获取方式                获取地址
+====================  ========================================================================
+百度网盘                https://pan.baidu.com/s/19rW0fPKUlQj6eldZpZFoAA    提取码: a6ps
+Google Drive           https://drive.google.com/open?id=1RsV2WEKAsfxbn-Z5nGjk5g3ml1UDEsDc
 ====================  ========================================================================
 
 
@@ -100,7 +100,7 @@ sudo dpkg -i 即可安装 deb 包。如下：
   dependency problems - leaving unconfigured
   Errors were encountered while processing:
   mynteye-s-calibrator
- 
+
 可以继续执行 sudo apt-get -f install 完成安装，
 
 .. code-block:: bash
@@ -165,7 +165,7 @@ sudo dpkg -i 即可安装 deb 包。如下：
 -s METERS, --square=METERS  棋盘格格子边长, 默认: 0.036
 -n NUMBER, --number=NUMBER  用于标定的图片张数, 默认: 11
 -p PATH, --path=PATH        保存结果的文件夹名, 默认: 相机SN名
-* -x -y -s 用于设定标定板的宽、高、格子大小。宽、高分别指棋盘格横纵向的黑白交叉点数。格子大小，单位是 m 
+* -x -y -s 用于设定标定板的宽、高、格子大小。宽、高分别指棋盘格横纵向的黑白交叉点数。格子大小，单位是 m
 
 
 3.3 使用步骤
@@ -175,7 +175,7 @@ sudo dpkg -i 即可安装 deb 包。如下：
 
 * 然后，终端里运行 mynteye-s-calibrator <标定板参数> 命令，标定板参数需要根据使用的标定板来设置，参数说明见上
 
-.. image:: ../../images/calibration001.png
+.. image:: ../../images/tools/calibration001.png
    :width: 60%
 
 * 按提示选择相机某个分辨率的 index ，进行此分辨率下的图像标定。
@@ -186,19 +186,19 @@ sudo dpkg -i 即可安装 deb 包。如下：
 
 参考的采集图像，如下：
 
-.. image:: ../../images/calibration002.png
+.. image:: ../../images/tools/calibration002.png
    :width: 60%
 
-.. image:: ../../images/calibration003.png
+.. image:: ../../images/tools/calibration003.png
    :width: 60%
 
-.. image:: ../../images/calibration004.png
+.. image:: ../../images/tools/calibration004.png
    :width: 60%
 
-.. image:: ../../images/calibration005.png
+.. image:: ../../images/tools/calibration005.png
    :width: 60%
 
-.. image:: ../../images/calibration006.png
+.. image:: ../../images/tools/calibration006.png
    :width: 60%
 
 
@@ -207,7 +207,7 @@ sudo dpkg -i 即可安装 deb 包。如下：
 * 一旦达到标定需求采集的图像数目后，就会进行标定计算、输出结果。如下：
 
 
-.. image:: ../../images/calibration007.png
+.. image:: ../../images/tools/calibration007.png
    :width: 60%
 
 
@@ -223,7 +223,7 @@ sudo dpkg -i 即可安装 deb 包。如下：
 
 * 最后，还会询问是否写入相机设备。回车或`y`即表示确认，
 
-.. image:: ../../images/calibration008.png
+.. image:: ../../images/tools/calibration008.png
    :width: 60%
 
 * 写入设备后，将提示“Write to device done”。

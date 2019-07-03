@@ -1,6 +1,6 @@
-.. _content_InstallContents_source_install_windows:
+.. _sdk_install_windows_src:
 
-Windows SDK 源码安装
+Windows 源码安装
 =====================
 
 .. only:: html
@@ -73,13 +73,13 @@ Visual Studio（提供编译）
 
   Visual Studio Command Prompt 可以从开始菜单打开，
 
-  .. image:: ../../images/vs_cmd_menu.png
+  .. image:: ../../images/sdk/vs_cmd_menu.png
     :width: 30%
 
 
   也可以从 Visual Studio 的工具菜单里打开，
 
-  .. image:: ../../images/vs_cmd.png
+  .. image:: ../../images/sdk/vs_cmd.png
     :width: 40%
 
 
@@ -98,7 +98,7 @@ Visual Studio（提供编译）
 
   Visual Studio Command Prompt 里就可以用编译命令 ``cl`` ``link`` ``lib`` ``msbuild`` 等(需要先完成``MSYS2``和``获取代码``步骤)，
 
-  .. image:: ../../images/vs_cmd_test.png
+  .. image:: ../../images/sdk/vs_cmd_test.png
 
 MSYS2（提供 Linux 命令）
 ~~~~~~~~~~~~~~~~~~~~~~~~

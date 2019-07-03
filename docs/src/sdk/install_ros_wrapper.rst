@@ -1,7 +1,7 @@
-.. _content_InstallContents_install_ros:
+.. _sdk_install_ros_wrapper:
 
-ROS 安装
-==========
+ROS Wrapper 安装
+================
 
 .. only:: html
 

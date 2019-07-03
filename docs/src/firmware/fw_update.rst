@@ -1,4 +1,4 @@
-.. _content_FirmwareUpdate:
+.. _fw_update:
 
 升级固件
 ==================
@@ -6,6 +6,6 @@
 .. toctree::
    :maxdepth: 2
 
-   upgrade
-   auxiliary_chip_update
+   update_main_chip
+   update_auxiliary_chip
    from_v1

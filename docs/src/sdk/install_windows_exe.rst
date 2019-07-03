@@ -1,6 +1,6 @@
-.. _content_InstallContents_exe_install_windows:
+.. _install_windows_exe:
 
-Windows SDK exe 安装
+Windows EXE 安装
 =====================
 
 .. only:: html

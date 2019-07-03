@@ -1,6 +1,6 @@
-.. _content_product_surface_surface_s2100:
+.. _product_surface_s2100:
 
-MYNTEYE-S2100 尺寸与结构
+S2100 尺寸与结构
 ==========================
 
 ============= ===========
@@ -9,7 +9,7 @@ MYNTEYE-S2100 尺寸与结构
 125x47x40     100x15
 ============= ===========
 
-.. image:: ../../images/mynteye_avatar_surface_zh-Hans.jpg
+.. image:: ../../images/product/mynteye_s2_surface_zh-Hans.jpg
 
 A. 摄像头：摄像头传感器镜头，在使用中请注意保护，以避免成像质量下降。
 B. USB Micro-B 接口及固定孔：使用中，插上 USB Micro-B 数据线后，请使用接口端的螺丝紧固接口，以避免使用中损坏接口，也保证数据连接的稳定性。

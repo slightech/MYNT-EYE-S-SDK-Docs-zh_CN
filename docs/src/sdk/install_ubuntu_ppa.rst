@@ -1,6 +1,6 @@
-.. _content_InstallContents_ppa_install_ubuntu:
+.. _sdk_install_ubuntu_ppa:
 
-Ubuntu SDK PPA 安装
+Ubuntu PPA 安装
 =====================
 
 .. only:: html

@@ -4,8 +4,8 @@
 .. toctree::
    :maxdepth: 2
 
-   product_description
+   product_desc
    product_surface
-   pro_intro
+   product_spec
    imu_coord
-   assembly
+   appendix

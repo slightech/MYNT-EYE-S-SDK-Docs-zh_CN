@@ -1,9 +1,9 @@
-.. _content_UpdateLog:
+.. _fw_info:
 
-更新日志
+固件说明
 ==================
 
 .. toctree::
    :maxdepth: 2
 
-   TODO
+   applicable

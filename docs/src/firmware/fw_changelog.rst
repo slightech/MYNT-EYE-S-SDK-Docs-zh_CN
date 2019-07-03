@@ -1,9 +1,9 @@
-.. _SDKContents:
+.. _fw_changelog:
 
-SDK说明
+更新日志
 ==================
 
 .. toctree::
    :maxdepth: 2
 
-   platform
+   TODO

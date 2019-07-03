@@ -4,6 +4,5 @@
 .. toctree::
    :maxdepth: 2
 
-   FirmwareContents
-   FirmwareUpdate
-   UpdateLogToDos
+   fw_info
+   fw_update

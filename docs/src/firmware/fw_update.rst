@@ -1,6 +1,6 @@
 .. _fw_update:
 
-升级固件
+固件升级
 ==================
 
 .. toctree::
@@ -8,4 +8,3 @@
 
    update_main_chip
    update_auxiliary_chip
-   from_v1

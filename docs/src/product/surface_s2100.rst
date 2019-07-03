@@ -1,6 +1,6 @@
-.. _mynteye_surface_s2100:
+.. _content_product_surface_surface_s2100:
 
-MYNTEYE-S2100尺寸与结构
+MYNTEYE-S2100 尺寸与结构
 ==========================
 
 ============= ===========

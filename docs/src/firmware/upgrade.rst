@@ -1,4 +1,4 @@
-.. _firmware_upgrade:
+.. _content_FirmwareUpdate_upgrade:
 
 主芯片如何进行升级
 ==================

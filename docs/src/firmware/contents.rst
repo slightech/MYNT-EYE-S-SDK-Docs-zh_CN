@@ -1,11 +1,9 @@
-.. _firmware:
-
-MYNT® EYE 固件
-==============
+固件
+==================
 
 .. toctree::
+   :maxdepth: 2
 
-   applicable
-   upgrade
-   auxiliary_chip_update
-   from_v1.rst
+   FirmwareContents
+   FirmwareUpdate
+   UpdateLogToDos

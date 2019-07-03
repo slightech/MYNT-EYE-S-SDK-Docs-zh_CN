@@ -1,6 +1,6 @@
 .. _data:
 
-MYNT® EYE 数据
+SDK 样例
 ==============
 
 .. toctree::

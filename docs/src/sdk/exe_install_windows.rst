@@ -1,4 +1,4 @@
-.. _sdk_exe_install_windows:
+.. _content_InstallContents_exe_install_windows:
 
 Windows SDK exe 安装
 =====================

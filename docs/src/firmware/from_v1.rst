@@ -1,4 +1,4 @@
-.. _sdk_from_v1:
+.. _content_FirmwareUpdate_from_v1:
 
 从 1.x 换到 2.x
 =================

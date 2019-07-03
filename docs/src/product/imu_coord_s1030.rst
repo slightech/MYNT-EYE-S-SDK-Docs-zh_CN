@@ -1,4 +1,4 @@
-.. _mynteye_imu_coord_s1030:
+.. _imu_coord_imu_coord_s1030:
 
 MYNTEYE-S1030 IMU 坐标系统
 ==============================

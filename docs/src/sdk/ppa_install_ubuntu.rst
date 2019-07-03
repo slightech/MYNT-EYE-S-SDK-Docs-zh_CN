@@ -1,4 +1,4 @@
-.. _sdk_ppa_install_ubuntu:
+.. _content_InstallContents_ppa_install_ubuntu:
 
 Ubuntu SDK PPA 安装
 =====================

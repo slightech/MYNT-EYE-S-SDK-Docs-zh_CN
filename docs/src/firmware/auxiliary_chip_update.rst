@@ -1,4 +1,4 @@
-.. _firmware_stm_update:
+.. _content_FirmwareUpdate_auxiliary_chip_update:
 
 协处理芯片如何进行升级
 =====================

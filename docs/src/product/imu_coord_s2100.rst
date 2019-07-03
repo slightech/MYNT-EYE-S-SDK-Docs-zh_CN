@@ -1,4 +1,4 @@
-.. _mynteye_imu_coord_s2100:
+.. _imu_coord_imu_coord_s2100:
 
 MYNTEYE-S2100 IMU 坐标系统
 ==============================

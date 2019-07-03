@@ -1,4 +1,4 @@
-.. _sdk_source_install_windows:
+.. _content_InstallContents_source_install_windows:
 
 Windows SDK 源码安装
 =====================
@@ -197,7 +197,7 @@ MSYS2（提供 Linux 命令）
     # OpenCV_DIR 为 OpenCVConfig.cmake 所在目录
     set OpenCV_DIR=C:\opencv
 
-  不然， CMake 会提示找不到 OpenCV 。如果不想依赖 OpenCV ，请阅读 :ref:`sdk_without_opencv` 。
+  不然， CMake 会提示找不到 OpenCV 。如果不想依赖 OpenCV ，请阅读 :ref:`content_InstallContents_without_opencv` 。
 
 编译并安装：
 

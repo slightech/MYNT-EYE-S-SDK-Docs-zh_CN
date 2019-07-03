@@ -3,7 +3,7 @@
 ROS 如何使用
 ==============
 
-按照 :ref:`sdk_install_ros` ，编译再运行节点。
+按照 :ref:`sdk_install_ros_wrapper` ，编译再运行节点。
 
 .. tip::
 

@@ -44,7 +44,7 @@
 
 此时，如果显示了图像，就能够看到图像上会有 IR 光斑,如下图:
 
-.. image:: ../../images/ir.png
+.. image:: ../../../images/sdk/ir.png
 
 
 .. attention::

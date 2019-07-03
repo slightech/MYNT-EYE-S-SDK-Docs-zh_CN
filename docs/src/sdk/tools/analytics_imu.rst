@@ -30,7 +30,7 @@ SDK 提供了 IMU 分析的脚本 ``imu_analytics.py`` 。工具详情可见 `to
 
 分析结果图会保存进数据集目录，参考如下：
 
-.. image:: ../../images/imu_analytics.png
+.. image:: ../../../images/sdk/tools/imu_analytics.png
 
 另外，脚本具体选项可执行 ``-h`` 了解：
 

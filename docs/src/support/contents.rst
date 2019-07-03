@@ -1,8 +1,10 @@
-固件
+技术支持
 ==================
 
 .. toctree::
    :maxdepth: 2
 
-   fw_info
-   fw_update
+.. toctree::
+
+   problem
+   contact

@@ -185,6 +185,8 @@ MSYS2（提供 Linux 命令）
     >msbuild ALL_BUILD.vcxproj /property:Configuration=Release
     >msbuild INSTALL.vcxproj /property:Configuration=Release
 
+    msbuild 路径可参考 ``C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe``
+
 编译代码
 --------
 
@@ -195,7 +197,7 @@ MSYS2（提供 Linux 命令）
   .. code-block:: bat
 
     # OpenCV_DIR 为 OpenCVConfig.cmake 所在目录
-    set OpenCV_DIR=C:\opencv
+    set OpenCV_DIR=C:\opencv\_build
 
   不然， CMake 会提示找不到 OpenCV 。如果不想依赖 OpenCV ，请阅读 :ref:`sdk_without_opencv` 。
 

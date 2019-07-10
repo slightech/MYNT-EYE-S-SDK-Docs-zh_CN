@@ -9,5 +9,6 @@ SDK
    data/contents
    control/contents
    tools/contents
-   sdk_changelog
    project/contents
+   sdk_changelog
+

@@ -6,3 +6,4 @@
 
    fw_info
    fw_update
+   fw_changelog

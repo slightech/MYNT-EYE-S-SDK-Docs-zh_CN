@@ -10,7 +10,7 @@ SDK 是基于 CMake 构建的，用以跨 Linux, Windows 等多个平台。SDK�
 * Windows 10
 * Ubuntu 18.04.1 / 16.04.6 / 14.04.5
 * Jetson TX1/TX2 / Xavier
-* firefly RK3399
+* firefly RK3399 `测试固件(提取码: y6qs) <https://pan.baidu.com/s/1wksbLwr1mHrwaAHBLKuYqQ>`_
 
 .. warning::
 

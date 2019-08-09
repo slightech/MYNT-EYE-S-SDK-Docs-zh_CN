@@ -18,5 +18,6 @@ SDK 数据样例
    get_from_callbacks
    get_with_plugin
    save_params
+   save_single_image
    write_img_params
    write_imu_params

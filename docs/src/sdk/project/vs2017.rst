@@ -1,0 +1,84 @@
+.. _vs2017:
+
+Visual Studio 2017 如何使用 SDK
+===============================
+
+本教程将使用 Visual Studio 2017 创建一个项目来使用 SDK 。
+
+   你可以在 ``<sdk>/platforms/projects/vs2017`` 目录下找到工程样例。
+
+准备
+----
+
+-  Windows: 安装 SDK 的 exe 包
+
+创建项目
+--------
+
+打开 Visual Studio 2017 ，然后 ``File > New > Project`` ，
+
+.. image:: ../../../images/project/vs2017/1_new_pro.png
+
+选择 “Windows Console Application” ，设置项目位置和名字，点击 “OK”，
+
+.. image:: ../../../images/project/vs2017/2_new_pro.png
+
+最后，你可以看到一个新的项目被创建，
+
+.. image:: ../../../images/project/vs2017/3_new_pro.png
+
+配置项目
+--------
+
+右键点击该项目， 打开 “Properties” 窗口，
+
+.. image:: ../../../images/project/vs2017/4_config.png
+
+将 “Configuration” 更改为 “All Configurations” ，然后添加以下路径到
+“Additional Include Directories” ，
+
+.. code:: bash
+
+   $(MYNTEYES_SDK_ROOT)\include
+   $(MYNTEYES_SDK_ROOT)\3rdparty\opencv\build\include
+
+.. image:: ../../../images/project/vs2017/5_config_include.png
+
+添加以下路径到 “Additional Library Directories” ，
+
+.. code:: bash
+
+   $(MYNTEYES_SDK_ROOT)\lib
+   $(MYNTEYES_SDK_ROOT)\3rdparty\opencv\build\x64\vc15\lib
+
+..  image:: ../../../images/project/vs2017/6_config_lib_dir.png
+
+添加以下库到 “Additional Dependencies” ，
+
+.. code:: bash
+
+   mynteye.lib
+   opencv_world343.lib
+
+.. image:: ../../../images/project/vs2017/7_config_lib.png
+
+如果需要使用debug模式，可以改变 “Configuration” 到 “Debug” 添加下列debug的库：
+
+.. code:: bash
+
+   mynteyed.lib
+   opencv_world343d.lib
+
+.. image:: ../../../images/project/vs2017/8_config_debug_lib.png
+
+
+使用SDK
+-------
+
+添加头文件和使用 API ，
+
+.. image:: ../../../images/project/vs2017/9_run_x64.png
+
+选择 “Release x64” 或者 “Debug x64” 来运行项目。
+
+.. image:: ../../../images/project/vs2017/10_path.png

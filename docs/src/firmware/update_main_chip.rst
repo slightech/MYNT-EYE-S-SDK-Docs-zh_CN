@@ -10,19 +10,19 @@
 .. code-block:: none
 
   Firmwares/
-  ├─Checksum.txt                 # File checksum
-  ├─MYNTEYE_S_2.5.0.img          # S1030 firmware
-  ├─MYNTEYE_S2100_1.3.img        # S2100 firmware
+  ├─Checksum.txt             # File checksum
+  ├─MYNTEYE-S1030-2.5.0.img  # S1030 firmware
+  ├─MYNTEYE-S2100-1.3.2.img  # S2100 firmware
   ├─...
-  └─setup.zip                    # MYNT EYE TOOL zip
+  └─mynt-eye-tool-setup.zip  # MYNT EYE TOOL zip
 
 固件升级程序，目前仅支持 Windows ，所以需要你在 Windows 下进行操作。步骤如下：
 
 下载准备
 --------
 
-* 下载并解压 ``setup.zip``。
-* 找到固件，如 ``MYNTEYE_S_2.5.0.img`` 。
+* 下载并解压 ``mynt-eye-tool-setup.zip``。
+* 找到固件，如 ``MYNTEYE-S1030-2.5.0.img`` 。
 
   * 请见 :ref:`firmware_applicable` 选择适合当前 SDK 版本的固件。
 

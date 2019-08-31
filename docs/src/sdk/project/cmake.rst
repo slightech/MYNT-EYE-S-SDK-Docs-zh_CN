@@ -5,7 +5,7 @@ CMake 如何使用 SDK
 
 本教程将使用 CMake 创建一个项目来使用 SDK 。
 
-   你可以在 ``<sdk>/platforms/projects/cmake`` 目录下找到工程样例。
+   你可以在 ``<sdk>/samples/simple_demo/project_cmake directory`` 目录下找到工程样例。
 
 准备
 ----

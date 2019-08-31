@@ -8,7 +8,7 @@
 启用 IR ，就是设定 ``Option::IR_CONTROL`` 大于 0 的值。值越大，强度越高。
 
 .. Attention::
-  * s2100/s210a不支持此功能
+  * s21XX不支持此功能
 
 参考代码片段：
 
@@ -49,6 +49,6 @@
 
 .. attention::
 
-  硬件不会记忆 IR 值，断电会忘掉。如果需要保持启用 IR 的话，程序在打开设备后，一定要设定下 IR 值。
+  硬件不记录IR设定值，断电后恢复为默认设置0。如果需要保持启用 IR 的话，程序在打开设备后，一定要设定下 IR 值。
 
-完整代码样例，请见 `infrared.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/control/infrared.cc>`_ 。
+完整代码样例，请见 `ctrl_infrared.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/ctrl_infrared.cc>`_ 。

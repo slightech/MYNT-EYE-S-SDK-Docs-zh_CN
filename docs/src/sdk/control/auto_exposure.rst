@@ -13,7 +13,7 @@
 * ``Option::MAX_EXPOSURE_TIME`` 最大曝光时间。
 * ``Option::DESIRED_BRIGHTNESS`` 期望亮度。
 
-以s2100/s210a为例，自动曝光可调节的设定有：
+以s21XX为例，自动曝光可调节的设定有：
 
 * ``Option::MAX_GAIN`` 最大增益。
 * ``Option::MAX_EXPOSURE_TIME`` 最大曝光时间。
@@ -45,7 +45,7 @@ s1030：
   LOG(INFO) << "Set DESIRED_BRIGHTNESS to "
             << api->GetOptionValue(Option::DESIRED_BRIGHTNESS);
 
-s2100/s210a：
+s21XX：
 
 .. code-block:: c++
 
@@ -86,7 +86,7 @@ s1030：
 
 .. code-block:: bash
 
-  $ ./samples/_output/bin/tutorials/ctrl_auto_exposure
+  $ ./samples/_output/bin/ctrl_auto_exposure
   I0513 14:07:57.963943 31845 utils.cc:26] Detecting MYNT EYE devices
   I0513 14:07:58.457536 31845 utils.cc:33] MYNT EYE devices:
   I0513 14:07:58.457563 31845 utils.cc:37]   index: 0, name: MYNT-EYE-S1000
@@ -97,11 +97,11 @@ s1030：
   I0513 14:07:58.521375 31845 auto_exposure.cc:41] Set DESIRED_BRIGHTNESS to 192
 
 
-s2100/s210a：
+s21XX：
 
 .. code-block:: bash
 
-  $ ./samples/_output/bin/tutorials/ctrl_auto_exposure 
+  $ ./samples/_output/bin/ctrl_auto_exposure
   I/utils.cc:30 Detecting MYNT EYE devices
   I/utils.cc:40 MYNT EYE devices:
   I/utils.cc:43   index: 0, name: MYNT-EYE-S210A, sn: 07C41A190009071F
@@ -126,4 +126,4 @@ s2100/s210a：
 
 样例程序会显示图像，左上角有真实曝光时间，单位毫秒。
 
-完整代码样例，请见 `auto_exposure.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/control/auto_exposure.cc>`_ 。
+完整代码样例，请见 `ctrl_auto_exposure.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/ctrl_auto_exposure.cc>`_ 。

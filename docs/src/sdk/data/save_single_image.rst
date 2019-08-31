@@ -49,4 +49,4 @@
 
 上述代码，用了 OpenCV 来显示图像。选中显示窗口时，按 ``ESC/Q`` 就会结束程序。
 
-完整代码样例，请见 `save_single_image.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/data/save_single_image.cc>`_ .
+完整代码样例，请见 `save_single_image.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/save_single_image.cc>`_ .

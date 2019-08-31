@@ -12,7 +12,7 @@
   * 图像帧率有效值： 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60。
   * IMU 频率有效值： 100, 200, 250, 333, 500 。
 
-以s2100/s210a为例,图像帧率需要在运行样例时选择，帧率和分辨率选择如下：
+以s21XX为例,图像帧率需要在运行样例时选择，帧率和分辨率选择如下：
 
 .. code-block:: bash
 
@@ -45,7 +45,7 @@ s1030：
   LOG(INFO) << "Set IMU_FREQUENCY to "
             << api->GetOptionValue(Option::IMU_FREQUENCY);
 
-s2100/s210a：
+s21XX：
 
 .. code-block:: c++
 
@@ -67,7 +67,7 @@ s1030：
 
 .. code-block:: bash
 
-  $ ./samples/_output/bin/tutorials/ctrl_framerate
+  $ ./samples/_output/bin/ctrl_framerate
   I0513 14:05:57.218222 31813 utils.cc:26] Detecting MYNT EYE devices
   I0513 14:05:57.899404 31813 utils.cc:33] MYNT EYE devices:
   I0513 14:05:57.899430 31813 utils.cc:37]   index: 0, name: MYNT-EYE-S1000
@@ -78,11 +78,11 @@ s1030：
   I0513 14:06:21.702388 31813 framerate.cc:85] Img count: 573, fps: 24.6122
   I0513 14:06:21.702404 31813 framerate.cc:87] Imu count: 11509, hz: 494.348
 
-s2100/s210a：
+s21XX：
 
 .. code-block:: bash
 
-  $ ./samples/_output/bin/tutorials/ctrl_framerate 
+  $ ./samples/_output/bin/ctrl_framerate
   I/utils.cc:30 Detecting MYNT EYE devices
   I/utils.cc:40 MYNT EYE devices:
   I/utils.cc:43   index: 0, name: MYNT-EYE-S210A, sn: 07C41A190009071F
@@ -105,4 +105,4 @@ s2100/s210a：
 
 样例程序按 ``ESC/Q`` 结束运行后，会输出计算得的图像帧率和 IMU 频率。
 
-完整代码样例，请见 `framerate.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/control/framerate.cc>`_ 。
+完整代码样例，请见 `ctrl_framerate.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/ctrl_framerate.cc>`_ 。

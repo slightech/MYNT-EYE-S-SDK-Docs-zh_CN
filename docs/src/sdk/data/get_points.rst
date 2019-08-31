@@ -7,7 +7,6 @@
 
 详细流程说明，请参阅 :ref:`get_stereo` :ref:`get_stereo_rectified` 。
 
-另外，推荐使用插件计算深度：深度图效果会更好，并且运算速度更快。具体请参阅 :ref:`get_with_plugin` 。
 
 参考代码片段：
 
@@ -50,7 +49,7 @@
 
 上述代码，用了 `PCL <https://github.com/PointCloudLibrary/pcl>`_ 来显示点云。关闭点云窗口时，也会结束程序。
 
-完整代码样例，请见 `get_points.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/data/get_points.cc>`_ 。
+完整代码样例，请见 `get_depth_and_points.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/get_depth_and_points.cc>`_ 。
 
 .. attention::
 

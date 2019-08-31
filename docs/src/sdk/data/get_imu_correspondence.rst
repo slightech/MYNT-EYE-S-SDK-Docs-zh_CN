@@ -106,4 +106,4 @@
   I/get_imu_correspondence.cc:61 Imu timestamp: 171419650, diff_prev=2020, diff_img=16608
   I/get_imu_correspondence.cc:61 Imu timestamp: 171421660, diff_prev=2010, diff_img=18624
 
-完整代码样例，请见 `get_imu_correspondence.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/data/get_imu_correspondence.cc>`_ 。
+完整代码样例，请见 `get_imu_correspondence.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/get_imu_correspondence.cc>`_ 。

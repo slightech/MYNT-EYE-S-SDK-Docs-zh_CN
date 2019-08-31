@@ -7,7 +7,7 @@
 
 .. tip::
   参数模版可以参考 ``tools/writer/config`` 下的参数文件，其中
-  S2100/S210A 对应的相机参数在 ``tools/writer/config/S210A``
+  S21XX 对应的相机参数在 ``tools/writer/config/S21XX``
   S1030 对应的相机参数在  ``tools/writer/config/S1030``
   equidistant表示等距模型，pinhole表示针孔模型
 
@@ -65,4 +65,4 @@
   P: 357.04,0,511.114,-42851.3,0,357.04,311.965,0,0,0,1,0,
 
 
-完整代码样例，请见 `get_img_params.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/data/get_img_params.cc>`_ 。
+完整代码样例，请见 `get_img_params.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/get_img_params.cc>`_ 。

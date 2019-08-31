@@ -37,7 +37,7 @@
 
 .. code-block:: bash
 
-  $ ./samples/_output/bin/tutorials/ctrl_imu_low_pass_filter 
+  $ ./samples/_output/bin/ctrl_imu_low_pass_filter
   I/utils.cc:30 Detecting MYNT EYE devices
   I/utils.cc:40 MYNT EYE devices:
   I/utils.cc:43   index: 0, name: MYNT-EYE-S210A, sn: 07C41A190009071F
@@ -60,4 +60,4 @@
 
 样例程序按 ``ESC/Q`` 结束运行后，imu低通滤波设置完成。该结果将固化在硬件内部，不受掉电影响。
 
-完整代码样例，请见 `imu_low_pass_filter.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/control/imu_low_pass_filter.cc>`_ 。
+完整代码样例，请见 `ctrl_imu_low_pass_filter.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/ctrl_imu_low_pass_filter.cc>`_ 。

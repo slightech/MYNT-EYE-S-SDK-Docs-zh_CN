@@ -13,7 +13,7 @@
   * 加速度计量程有效值（单位：g）： 4, 8, 16, 32 。
   * 陀螺仪量程有效值（单位：deg/s）： 500, 1000, 2000, 4000 。
 
-  s2100/s210a有效值：
+  s21XX有效值：
   
   * 加速度计量程有效值（单位：g）： 6, 12, 24, 48 。
   * 陀螺仪量程有效值（单位：deg/s）： 250, 500, 1000, 2000, 4000 。
@@ -38,7 +38,7 @@ s1030：
   LOG(INFO) << "Set GYROSCOPE_RANGE to "
             << api->GetOptionValue(Option::GYROSCOPE_RANGE);
 
-s2100/s210a：
+s21XX：
 
 .. code-block:: c++
 
@@ -78,7 +78,7 @@ s1030：
   I/imu_range.cc:84 Img count: 363, fps: 25.0967
   I/imu_range.cc:86 Imu count: 2825, hz: 195.312
 
-s2100/s210a：
+s21XX：
 
 .. code-block:: bash
 
@@ -105,4 +105,4 @@ s2100/s210a：
 
 样例程序按 ``ESC/Q`` 结束运行后，imu量程设置完成。该结果将固化在硬件内部，不受掉电影响。
 
-完整代码样例，请见 `imu_range.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/control/imu_range.cc>`_ 。
+完整代码样例，请见 `ctrl_imu_range.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/ctrl_imu_range.cc>`_ 。

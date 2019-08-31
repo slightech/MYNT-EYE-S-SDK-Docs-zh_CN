@@ -83,7 +83,7 @@ API 提供了 ``EnablePlugin()`` 函数，以启用某路径下的插件。
 
 如果找不到插件的依赖库，加载时将会报错 "Open plugin failed" 。
 
-完整代码样例，请见 `get_with_plugin.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/data/get_with_plugin.cc>`_ 。
+完整代码样例，请见 `get_with_plugin.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/get_with_plugin.cc>`_ 。
 
 .. tip::
 

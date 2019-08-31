@@ -5,7 +5,7 @@ Visual Studio 2017 如何使用 SDK
 
 本教程将使用 Visual Studio 2017 创建一个项目来使用 SDK 。
 
-   你可以在 ``<sdk>/platforms/projects/vs2017`` 目录下找到工程样例。
+   你可以在 ``<sdk>/samples/simple_demo/project_vs2017`` 目录下找到工程样例。
 
 准备
 ----

@@ -8,11 +8,11 @@
 设定IIC地址，就是设定 ``Option::IIC_ADDRESS_SETTING``。
 
 .. Attention::
-  仅支持S210A/S2100
+  仅支持S21XX
 
 参考代码片段：
 
-s210a/s2100:
+s2XX:
 
 .. code-block:: c++
 
@@ -32,11 +32,11 @@ s210a/s2100:
 
 参考运行结果，于 Linux 上：
 
-s210a/s2100:
+s21XX:
 
 .. code-block:: bash
 
-  $ ./samples/_output/bin/tutorials/ctrl_iic_adress
+  $ ./samples/_output/bin/ctrl_iic_adress
   I/utils.cc:30 Detecting MYNT EYE devices
   I/utils.cc:40 MYNT EYE devices:
   I/utils.cc:43   index: 0, name: MYNT-EYE-S210A, sn: 07C41A190009071F
@@ -55,4 +55,4 @@ s210a/s2100:
 
 样例程序按 ``ESC/Q`` 结束。
 
-完整代码样例，请见 `iic_address.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/control/iic_address.cc >`_ 。
+完整代码样例，请见 `ctrl_iic_address.cc <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/ctrl_iic_address.cc>`_ 。

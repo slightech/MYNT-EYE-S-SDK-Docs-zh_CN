@@ -34,7 +34,7 @@ Windows EXE 安装
 
   <SDK_ROOT_DIR>是指exe包安装路径
 
-进入 ``<SDK_ROOT_DIR>\bin\samples\tutorials`` 目录，双击 ``get_stereo.exe`` 运行，即可看到双目实时画面。
+进入 ``<SDK_ROOT_DIR>\bin\samples`` 目录，双击 ``get_stereo_rectified.exe`` 运行，即可看到双目实时画面。
 
 如果样例没有运行成功，请先检查一下系统变量PATH中是否成功添加了 ``<SDK_ROOT_DIR>\3rdparty\opencv\build``, ``<SDK_ROOT_DIR>\bin`` 路径，如果没有需要手动添加一下。
 

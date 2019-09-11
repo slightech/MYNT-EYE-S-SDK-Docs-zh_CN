@@ -30,8 +30,8 @@ x64 PPA安装
   $ sudo apt-get update
   $ sudo apt-get install mynt-eye-s-sdk
 
-armv8 PPA安装
---------------
+armv8 PPA安装(16.04)
+--------------------
 
 .. code-block:: bash
 
@@ -45,9 +45,9 @@ armv8 PPA安装
 
 .. tip::
 
-  samples 路径: /opt/mynt-eye-s-sdk/samples; tools 路径: /opt/mynt-eye-s-sdk/tools
+  samples 路径: /opt/mynt-eye-s-sdk/samples
 
 .. code-block:: bash
 
   $ cd /opt/mynt-eye-s-sdk/samples
-  $ ./api/camera_a
+  $ ./camera_with_junior_device_api

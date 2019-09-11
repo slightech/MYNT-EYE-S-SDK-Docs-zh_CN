@@ -124,26 +124,10 @@ Ubuntu 源码安装
 
 .. code-block:: bash
 
-  ./samples/_output/bin/api/camera_a
+  ./samples/_output/bin/camera_with_junior_device_api
 
 教程样例，请阅读 :ref:`data` 和 :ref:`ctrl` 。
 
-编译工具
---------
-
-.. code-block:: bash
-
-  cd <sdk>
-  make tools
-
-安装脚本依赖：
-
-.. code-block:: bash
-
-  cd <sdk>/tools/
-  sudo pip install -r requirements.txt
-
-工具和脚本的使用，后续会有介绍。
 
 结语
 ----

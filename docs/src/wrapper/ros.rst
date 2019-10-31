@@ -62,11 +62,14 @@ ROS 封装的文件结构，如下所示：
   │     │  ├─display.launch
   │     │  └─mynteye.launch
   │     │  └─...
-  │     ├─msg/
+  │     ├─mesh/
   │     ├─rviz/
   │     ├─src/
+  |     |  ├─configuru.hpp
   │     │  ├─wrapper_node.cc
   │     │  └─wrapper_nodelet.cc
+  │     ├─srv/
+  |     |  └─GetInfo.srv
   │     ├─CMakeLists.txt
   │     ├─nodelet_plugins.xml
   │     └─package.xml

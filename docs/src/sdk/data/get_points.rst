@@ -53,4 +53,4 @@
 
 .. attention::
 
-  准备好了 `PCL <https://github.com/PointCloudLibrary/pcl>`_ 库，编译教程样例时才会有此例子。如果 `PCL <https://github.com/PointCloudLibrary/pcl>`_ 库安装到了自定义目录，那么请打开 `tutorials/CMakeLists.txt <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/tutorials/CMakeLists.txt>`_ ，找到 ``find_package(PCL)`` ，把 ``PCLConfig.cmake`` 所在目录添加进 ``CMAKE_PREFIX_PATH`` 。
+  准备好了 `PCL <https://github.com/PointCloudLibrary/pcl>`_ 库，编译教程样例时才会有此例子。如果 `PCL <https://github.com/PointCloudLibrary/pcl>`_ 库安装到了自定义目录，那么请打开 `CMakeLists.txt <https://github.com/slightech/MYNT-EYE-S-SDK/blob/master/samples/CMakeLists.txt>`_ ，找到 ``find_package(PCL)`` ，把 ``PCLConfig.cmake`` 所在目录添加进 ``CMAKE_PREFIX_PATH`` 。

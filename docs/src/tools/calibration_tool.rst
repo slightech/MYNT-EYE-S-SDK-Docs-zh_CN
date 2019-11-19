@@ -67,7 +67,7 @@ Google Drive           https://drive.google.com/open?id=1RsV2WEKAsfxbn-Z5nGjk5g3
   $ sudo add-apt-repository ppa:slightech/mynt-eye-s-sdk
   $ sudo apt-get update
   $ sudo apt-get install mynteye-s-calibrator
-  $ sudo ln -sf /opt/myntai/mynteye-s-calibrator/mynteye-s-calibrator /usr/local/bin/ mynteye-s-calibrator
+  $ sudo ln -sf /opt/myntai/mynteye-s-calibrator/mynteye-s-calibrator /usr/local/bin/mynteye-s-calibrator
 
 
 2.3 安装 deb 包

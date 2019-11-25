@@ -153,7 +153,7 @@ sudo dpkg -i 即可安装 deb 包。如下：
   $ mynteye-s-calibrator -h
   Usage: mynteye-s-calibrator [options]
   help: mynteye-s-calibrator -h
-  calibrate: mynteye-s-calibrator -x 11 -y 7 -s 0.036
+  calibrate: mynteye-s-calibrator -x 11 -y 7 -s 0.036 -n 6
 
   Calibrate MYNT EYE S device.
 

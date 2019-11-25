@@ -67,7 +67,7 @@ s1030：
 
 .. code-block:: bash
 
-  $ ./samples/_output/bin/tutorials/ctrl_imu_range
+  $ ./samples/_output/bin/ctrl_imu_range
   I/utils.cc:28 Detecting MYNT EYE devices
   I/utils.cc:38 MYNT EYE devices:
   I/utils.cc:41   index: 0, name: MYNT-EYE-S1030, sn: 4B4C1F1100090712
@@ -82,7 +82,7 @@ s21XX：
 
 .. code-block:: bash
 
-  $ ./samples/_output/bin/tutorials/ctrl_imu_range 
+  $ ./samples/_output/bin/ctrl_imu_range
   I/utils.cc:30 Detecting MYNT EYE devices
   I/utils.cc:40 MYNT EYE devices:
   I/utils.cc:43   index: 0, name: MYNT-EYE-S210A, sn: 07C41A190009071F

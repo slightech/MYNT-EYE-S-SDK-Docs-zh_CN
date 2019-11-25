@@ -15,6 +15,11 @@
 #define MYNTEYE_DEVICE_DEVICE_H_
 #pragma once
 
+#include <sys/types.h>
+// undef major & minor for 18.04 gcc
+#undef major
+#undef minor
+
 #include <map>
 #include <memory>
 #include <mutex>
@@ -223,6 +228,10 @@ class MYNTEYE_API Device {
    * Set the option value.
    */
   void SetOptionValue(const Option &option, std::int32_t value);
+  /**
+   * Set the option value.
+   */
+  bool SetOptionValue(const Option &option, std::uint64_t value);
 
   /**
    * Run the option action.
@@ -287,6 +296,10 @@ class MYNTEYE_API Device {
    */
   void EnableMotionDatas();
   /**
+   * Enable motion datas timestamp correspondence.
+   */
+  void EnableImuCorrespondence(bool is_enable);
+  /**
    * Enable cache motion datas.
    */
   void EnableMotionDatas(std::size_t max_size);
@@ -294,6 +307,13 @@ class MYNTEYE_API Device {
    * Get the motion datas.
    */
   std::vector<device::MotionData> GetMotionDatas();
+
+  /** Enable process mode, e.g. imu assembly, temp_drift */
+  void EnableProcessMode(const ProcessMode& mode);
+  /** Enable process mode, e.g. imu assembly, temp_drift */
+  void EnableProcessMode(const std::int32_t& mode);
+
+  bool CheckImageParams();
 
  protected:
   std::shared_ptr<uvc::device> device() const {
@@ -373,6 +393,8 @@ class MYNTEYE_API Device {
       DeviceInfo *info, img_params_map_t *img_params, imu_params_t *imu_params);
   bool SetFiles(
       DeviceInfo *info, img_params_map_t *img_params, imu_params_t *imu_params);
+
+  bool is_default_intrinsics_;
 
   friend API;
   friend tools::DeviceWriter;

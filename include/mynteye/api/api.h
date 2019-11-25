@@ -238,9 +238,24 @@ class MYNTEYE_API API {
       const DisparityComputingMethod &MethodType);
 
   /**
+   * Set the rectify bord cut alpha.
+   */
+  void SetRectifyAlpha(const double &alpha);
+
+  /**
+   * Set if the duplicate frames is enable.
+   */
+  void setDuplicate(bool isEnable);
+
+  /**
    * Set the option value.
    */
   void SetOptionValue(const Option &option, std::int32_t value);
+
+  /**
+   * Set the option value.
+   */
+  bool SetOptionValue(const Option &option, std::uint64_t value);
 
   /**
    * Run the option action.
@@ -332,7 +347,12 @@ class MYNTEYE_API API {
   std::vector<api::MotionData> GetMotionDatas();
 
   /**
-   * Enable motion datas with timestamp correspondence of some stream.
+   * enable motion datas timestamp correspondence in device.
+   */
+  void EnableImuTimestampCorrespondence(bool is_enable);
+
+  /**
+   * Enable motion datas with timestamp correspondence of some stream in api.
    */
   void EnableTimestampCorrespondence(const Stream &stream,
         bool keep_accel_then_gyro = true);
@@ -344,6 +364,23 @@ class MYNTEYE_API API {
 
   std::shared_ptr<Device> device();
 
+  /** Enable process mode, e.g. imu assembly, temp_drift */
+  void EnableProcessMode(const ProcessMode& mode);
+  /** Enable process mode, e.g. imu assembly, temp_drift */
+  void EnableProcessMode(const std::int32_t& mode);
+
+  /** 
+   * Get ROS need camera info struct
+   */
+  std::shared_ptr<struct CameraROSMsgInfoPair> GetCameraROSMsgInfoPair();
+
+  /**
+   * Load disparity config from file.
+   */
+  bool ConfigDisparityFromFile(const std::string& config_file);
+
+  bool IsDefaultIntrinsics();
+
  private:
   std::shared_ptr<Device> device_;
 
@@ -352,6 +389,9 @@ class MYNTEYE_API API {
   std::unique_ptr<Correspondence> correspondence_;
 
   motion_callback_t callback_;
+
+  bool api_correspondence_enable_;
+  bool dev_correspondence_enable_;
 
   void CheckImageParams();
 };

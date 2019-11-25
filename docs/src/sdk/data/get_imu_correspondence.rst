@@ -58,7 +58,7 @@
 
 .. code-block:: bash
 
-  $ ./samples/_output/bin/tutorials/get_imu_correspondence
+  $ ./samples/_output/bin/get_imu_correspondence
   I/utils.cc:30 Detecting MYNT EYE devices
   I/utils.cc:40 MYNT EYE devices:
   I/utils.cc:43   index: 0, name: MYNT-EYE-S1030, sn: 0281351000090807

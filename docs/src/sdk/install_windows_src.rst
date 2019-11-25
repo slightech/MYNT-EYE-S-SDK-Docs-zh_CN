@@ -159,7 +159,7 @@ MSYS2（提供 Linux 命令）
 
 .. tip::
 
-  OpenCV 官方提供了 ``exe`` 进行安装。如果想从源码编译，请见官方文档 `Installation in Windows <https://docs.opencv.org/master/d3/d52/tutorial_windows_install.html>`_ 。或参考如下命令：
+  OpenCV 官方提供了 ``exe`` 进行安装(不支持4.0+)。如果想从源码编译，请见官方文档 `Installation in Windows <https://docs.opencv.org/master/d3/d52/tutorial_windows_install.html>`_ 。或参考如下命令：
 
   .. code-block:: bat
 

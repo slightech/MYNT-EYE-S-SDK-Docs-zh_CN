@@ -24,7 +24,7 @@
 
 .. code-block:: bash
 
-  $ ./samples/_output/bin/tutorials/get_device_info
+  $ ./samples/_output/bin/get_device_info
   I0503 16:40:21.109391 32106 utils.cc:13] Detecting MYNT EYE devices
   I0503 16:40:21.604116 32106 utils.cc:20] MYNT EYE devices:
   I0503 16:40:21.604127 32106 utils.cc:24]   index: 0, name: MYNT-EYE-S1000

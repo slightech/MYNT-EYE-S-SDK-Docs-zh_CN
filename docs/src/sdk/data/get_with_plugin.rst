@@ -38,7 +38,7 @@ API 提供了 ``EnablePlugin()`` 函数，以启用某路径下的插件。
 
   auto &&api = API::Create(argc, argv);
 
-  api->EnablePlugin("plugins/linux-x86_64/libplugin_g_cuda9.1_opencv3.4.0.so");
+  api->EnablePlugin("plugins/linux-x86_64/libplugin_g_cuda10.1_opencv3.4.1.so");
 
 路径可以是绝对路径，也可以是相对路径（相对于当前工作目录）。
 

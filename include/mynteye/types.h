@@ -16,6 +16,7 @@
 #pragma once
 
 #include <memory.h>
+#include <string>
 
 #include <cstdint>
 
@@ -43,6 +44,8 @@ enum class Model : std::uint8_t {
   STANDARD2,
   /** Standard 210a */
   STANDARD210A,
+  /** Standard 200b */
+  STANDARD200B,
   /** Last guard */
   LAST
 };
@@ -152,7 +155,7 @@ enum class Option : std::uint8_t {
   /**
    * Image contrast, valid if manual-exposure
    * <p>
-   *   range: [0,255], default: 127
+   *   range: [0,254], default: 116
    * </p>
    */
   CONTRAST,
@@ -192,14 +195,14 @@ enum class Option : std::uint8_t {
    * Max exposure time, valid if auto-exposure
    * <p>
    *   range of standard 1: [0,240], default: 240<br>
-   *   range of standard 2: [0,1000], default: 333
+   *   range of standard 2: [0,655], default: 333
    * </p>
    */
   MAX_EXPOSURE_TIME,
   /**
    * min exposure time, valid if auto-exposure
    * <p>
-   *   range: [0,1000], default: 0<br>
+   *   range: [0,655], default: 0<br>
    * </p>
    */
   MIN_EXPOSURE_TIME,
@@ -222,8 +225,8 @@ enum class Option : std::uint8_t {
   /**
    * HDR mode
    * <p>
-   *   0: 10-bit<br>
-   *   1: 12-bit
+   *   0: normal<br>
+   *   1: WDR
    * </p>
    */
   HDR_MODE,
@@ -259,10 +262,21 @@ enum class Option : std::uint8_t {
    */
   GYROSCOPE_LOW_PASS_FILTER,
 
+  /**
+   * The setting of IIC address
+   * <p>
+   *   range: [0,127], default: 0
+   * </p>
+   */
+  IIC_ADDRESS_SETTING,
+
   /** Zero drift calibration */
   ZERO_DRIFT_CALIBRATION,
   /** Erase chip */
   ERASE_CHIP,
+
+  /** Sync timestamp */
+  SYNC_TIMESTAMP,
 
   /** Last guard */
   LAST
@@ -344,6 +358,30 @@ enum class Format : std::uint32_t {
 };
 
 #undef MYNTEYE_FOURCC
+
+/**
+ * @ingroup enumerations
+ * @brief Process modes.
+ */
+enum class ProcessMode : std::int32_t {
+  PROC_NONE           = 0,
+  PROC_IMU_ASSEMBLY   = 1,
+  PROC_IMU_TEMP_DRIFT = 2,
+  PROC_IMU_ALL        = PROC_IMU_ASSEMBLY | PROC_IMU_TEMP_DRIFT
+};
+
+inline
+std::int32_t operator&(const std::int32_t& lhs, const ProcessMode& rhs) {
+  return lhs & static_cast<std::int32_t>(rhs);
+}
+inline
+std::int32_t operator&(const ProcessMode& lhs, const std::int32_t& rhs) {
+  return static_cast<std::int32_t>(lhs) & rhs;
+}
+inline
+std::int32_t operator&(const ProcessMode& lhs, const ProcessMode& rhs) {
+  return static_cast<std::int32_t>(lhs) & static_cast<std::int32_t>(rhs);
+}
 
 MYNTEYE_API const char *to_string(const Format &value);
 
@@ -440,6 +478,7 @@ struct MYNTEYE_API IntrinsicsBase {
     calib_model_ = CalibrationModel::UNKNOW;
   }
   virtual ~IntrinsicsBase() {}
+  virtual void ResizeIntrinsics() {}
 
   /** The calibration model */
   CalibrationModel calib_model() const {
@@ -449,7 +488,8 @@ struct MYNTEYE_API IntrinsicsBase {
   std::uint16_t width;
   /** The height of the image in pixels */
   std::uint16_t height;
-
+  /** Resize scale */
+  double resize_scale = 1.0;
  protected:
   CalibrationModel calib_model_;
 };
@@ -464,6 +504,15 @@ std::ostream &operator<<(std::ostream &os, const IntrinsicsBase &in);
 struct MYNTEYE_API IntrinsicsPinhole : public IntrinsicsBase {
   IntrinsicsPinhole() {
     calib_model_ = CalibrationModel::PINHOLE;
+  }
+  void ResizeIntrinsics() {
+    width = static_cast<std::uint16_t>(width * resize_scale);
+    height = static_cast<std::uint16_t>(height * resize_scale);
+    fx *= resize_scale;
+    fy *= resize_scale;
+    cx *= resize_scale;
+    cy *= resize_scale;
+    resize_scale = 1.0;
   }
   /** The focal length of the image plane, as a multiple of pixel width */
   double fx;
@@ -497,6 +546,15 @@ struct MYNTEYE_API IntrinsicsEquidistant : public IntrinsicsBase {
   }
   /** The distortion coefficients: k2,k3,k4,k5,mu,mv,u0,v0 */
   double coeffs[8];
+  void ResizeIntrinsics() {
+    width = static_cast<std::uint16_t>(width * resize_scale);
+    height = static_cast<std::uint16_t>(height * resize_scale);
+    coeffs[4] *= resize_scale;
+    coeffs[5] *= resize_scale;
+    coeffs[6] *= resize_scale;
+    coeffs[7] *= resize_scale;
+    resize_scale = 1.0;
+  }
 };
 
 MYNTEYE_API
@@ -516,12 +574,24 @@ struct MYNTEYE_API ImuIntrinsics {
    * \endcode
    */
   double scale[3][3];
-  /* Zero-drift: X, Y, Z */
+  /** Assembly error [3][3] */
+  double assembly[3][3];
+  /** Zero-drift: X, Y, Z */
   double drift[3];
   /** Noise density variances */
   double noise[3];
   /** Random walk variances */
   double bias[3];
+
+  /** Temperature drift
+   *  \code
+   *    0 - Constant value
+   *    1 - Slope
+   *  \endcode
+   */
+  double x[2];
+  double y[2];
+  double z[2];
 };
 
 MYNTEYE_API
@@ -562,6 +632,10 @@ struct MYNTEYE_API Extrinsics {
 MYNTEYE_API
 std::ostream &operator<<(std::ostream &os, const Extrinsics &ex);
 
+
+/**
+ * @defgroup disparity params
+ */
 /**
  * @ingroup disparity
  * Camera disparity computing method type.
@@ -574,7 +648,6 @@ enum class DisparityComputingMethod : std::uint8_t {
   /** unknow */
   UNKNOW
 };
-
 
 /**
  * @defgroup datatypes Datatypes
@@ -592,11 +665,14 @@ struct MYNTEYE_API ImgData {
   std::uint64_t timestamp;
   /** Image exposure time, virtual value in [1, 480] */
   std::uint16_t exposure_time;
+  /** Is external time source */
+  bool is_ets = false;
 
   void Reset() {
     frame_id = 0;
     timestamp = 0;
     exposure_time = 0;
+    is_ets = false;
   }
 
   ImgData() {
@@ -606,11 +682,13 @@ struct MYNTEYE_API ImgData {
     frame_id = other.frame_id;
     timestamp = other.timestamp;
     exposure_time = other.exposure_time;
+    is_ets = other.is_ets;
   }
   ImgData &operator=(const ImgData &other) {
     frame_id = other.frame_id;
     timestamp = other.timestamp;
     exposure_time = other.exposure_time;
+    is_ets = other.is_ets;
     return *this;
   }
 };
@@ -631,6 +709,8 @@ struct MYNTEYE_API ImuData {
    * </p>
    */
   std::uint8_t flag;
+  /** Is external time source */
+  bool is_ets = false;
   /** IMU timestamp in 1us */
   std::uint64_t timestamp;
   /** IMU accelerometer data for 3-axis: X, Y, Z. */
@@ -668,6 +748,39 @@ struct MYNTEYE_API OptionInfo {
 
 MYNTEYE_API
 std::ostream &operator<<(std::ostream &os, const OptionInfo &info);
+
+/**
+ * @ingroup datatypes
+ * ROS camera info.
+ */
+struct MYNTEYE_API CameraROSMsgInfo {
+  /** height */
+  unsigned int height = 0;
+  /** width */
+  unsigned int width = 0;
+  /** calib model */
+  std::string distortion_model = "null";
+  double  D[5] = {0};
+  double  K[9] = {0};
+  double  R[9] = {0};
+  double  P[12] = {0};
+};
+MYNTEYE_API
+std::ostream &operator<<(std::ostream &os, const CameraROSMsgInfo &info);
+
+struct CameraROSMsgInfoPair {
+  inline bool isEmpty() {
+    return left.height * left.width * right.height * right.width <= 0;
+  }
+  struct CameraROSMsgInfo left;
+  struct CameraROSMsgInfo right;
+  double T_mul_f = -1.f;
+  double cx1_minus_cx2 = 0.f;
+  double  R[9] = {0};
+  double  P[12] = {0};
+};
+MYNTEYE_API
+std::ostream &operator<<(std::ostream &os, const CameraROSMsgInfoPair &info);
 
 MYNTEYE_END_NAMESPACE
 

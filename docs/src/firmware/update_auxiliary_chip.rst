@@ -18,7 +18,7 @@
 .. image:: ../../images/firmware/stmupdate.png
    :width: 60%
 
-* 在打开的文件选择框里，选择要升级的固件 ``MYNTEYE-S2100-auxiliary-chip-1.4.2.bin``，开始升级。
+* 在打开的文件选择框里，选择要升级的固件 ``MYNTEYE-S21X0-auxiliary-chip-1.4.2.bin``，开始升级。
 
 * 升级完成后，会显示升级结束.
 

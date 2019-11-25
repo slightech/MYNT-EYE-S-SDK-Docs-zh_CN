@@ -58,7 +58,7 @@ Ubuntu 源码安装
 
 .. tip::
 
-  如果需要安装ROS，可以不用安装OpenCV/PCL, 以防兼容性问题。
+  如果需要安装ROS(不支持4.0+)，可以不用安装OpenCV/PCL, 以防兼容性问题。
   OpenCV 如何编译安装，请见官方文档 `Installation in Linux <https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html>`_ 。或参考如下命令：
 
   .. code-block:: bash

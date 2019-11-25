@@ -54,7 +54,7 @@ ROS 封装的文件结构，如下所示：
   │     ├─config/
   │     │  ├─device/
   │     │     ├─standard.yaml   # S1030
-  │     │     └─standard2.yaml  # S2100/S210A
+  │     │     └─standard2.yaml  # S21X0/S210A
   │     │  ├─laserscan/
   │     │  ├─process/
   │     │  └─...
@@ -81,7 +81,7 @@ standard.yaml/standard2.yaml:
 
 .. code-block:: xml
 
-  # s2100/s210a 修改分辨率/帧率参数
+  # s21X0/s210a 修改分辨率/帧率参数
   standard2/request_index: 2
 
   # s1030 修改帧率/imu频率等
@@ -93,14 +93,14 @@ standard.yaml/standard2.yaml:
   standard/imu_frequency: -1
   # standard/imu_frequency: 200
 
-  # s2100 修改曝光时间等
-  # standard2/brightness range: [0,240]
+  # s21X0 修改曝光时间等
+  # standard2/brightness range: [1,255]
   standard2/brightness: -1
   # standard2/brightness: 120
   ...
 
   # s210a 修改曝光时间等
-  # standard210a/brightness range: [0,240]
+  # standard210a/brightness range: [1,255]
   standard210a/brightness: -1
   # standard210a/brightness: 120
   ...

@@ -33,7 +33,7 @@
 
 .. code-block:: bash
 
-  $ ./samples/_output/bin/tutorials/ctrl_infrared
+  $ ./samples/_output/bin/ctrl_infrared
   I0504 16:16:28.016624 25848 utils.cc:13] Detecting MYNT EYE devices
   I0504 16:16:28.512462 25848 utils.cc:20] MYNT EYE devices:
   I0504 16:16:28.512473 25848 utils.cc:24]   index: 0, name: MYNT-EYE-S1000

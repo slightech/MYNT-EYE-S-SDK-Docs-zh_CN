@@ -11,8 +11,8 @@
 
   Firmwares/
   ├─Checksum.txt             # File checksum
-  ├─MYNTEYE-S1030-2.5.0.img  # S1030 firmware
-  ├─MYNTEYE-S21x0-1.4.0.img  # S21x0 firmware
+  ├─MYNTEYE-S1030-2.7.0.img  # S1030 firmware
+  ├─MYNTEYE-S21x0-2.1.0.img  # S21x0 firmware
   ├─...
   └─mynt-eye-tool-setup.zip  # MYNT EYE TOOL zip
 
@@ -22,7 +22,7 @@
 --------
 
 * 下载并解压 ``mynt-eye-tool-setup.zip``。
-* 找到固件，如 ``MYNTEYE-S1030-2.5.0.img`` 。
+* 找到固件，如 ``MYNTEYE-S1030-2.7.0.img`` 。
 
   * 请见 :ref:`firmware_applicable` 选择适合当前 SDK 版本的固件。
 

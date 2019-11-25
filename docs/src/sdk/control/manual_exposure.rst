@@ -33,7 +33,7 @@ s1030：
   api->SetOptionValue(Option::GAIN, 24);
   // brightness/exposure_time: range [0,240], default 120
   api->SetOptionValue(Option::BRIGHTNESS, 120);
-  // contrast/black_level_calibration: range [0,255], default 116
+  // contrast/black_level_calibration: range [0,254], default 116
   api->SetOptionValue(Option::CONTRAST, 116);
 
   LOG(INFO) << "Enable manual-exposure";
@@ -55,7 +55,7 @@ s21XX：
   // manual-exposure: 1
   api->SetOptionValue(Option::EXPOSURE_MODE, 1);
 
-  // brightness/exposure_time: range [0,240], default 120
+  // brightness/exposure_time: range [1,255], default 120
   api->SetOptionValue(Option::BRIGHTNESS, 120);
 
   LOG(INFO) << "Enable manual-exposure";
@@ -71,7 +71,7 @@ s1030：
 
 .. code-block:: bash
 
-  $ ./samples/_output/bin/tutorials/ctrl_manual_exposure
+  $ ./samples/_output/bin/ctrl_manual_exposure
   I0513 14:09:17.104431 31908 utils.cc:26] Detecting MYNT EYE devices
   I0513 14:09:17.501519 31908 utils.cc:33] MYNT EYE devices:
   I0513 14:09:17.501551 31908 utils.cc:37]   index: 0, name: MYNT-EYE-S1000
@@ -85,7 +85,7 @@ s21XX：
 
 .. code-block:: bash
 
-  $ ./samples/_output/bin/tutorials/ctrl_manual_exposure 
+  $ ./samples/_output/bin/ctrl_manual_exposure
   I/utils.cc:30 Detecting MYNT EYE devices
   I/utils.cc:40 MYNT EYE devices:
   I/utils.cc:43   index: 0, name: MYNT-EYE-S210A, sn: 07C41A190009071F

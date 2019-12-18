@@ -12,7 +12,7 @@
   Firmwares/
   ├─Checksum.txt             # File checksum
   ├─MYNTEYE-S1030-2.7.0.img  # S1030 firmware
-  ├─MYNTEYE-S21x0-2.1.2.img  # S21x0 firmware
+  ├─MYNTEYE-S21x0-2.1.0.img  # S21x0 firmware
   ├─...
   └─mynt-eye-tool-setup.zip  # MYNT EYE TOOL zip
 

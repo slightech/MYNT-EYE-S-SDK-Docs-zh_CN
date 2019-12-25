@@ -54,4 +54,4 @@ p.s. 样例教程，可见 `SDK <https://slightech.github.io/MYNT-EYE-S-SDK/>`_ 
 如何于 Visual Studio 2017 下使用 SDK
 ------------------------------------
 
-进入 ``<SDK_ROOT_DIR>\projects\vs2017`` ，见 ``README.md`` 说明。
+进入 ``<SDK_ROOT_DIR>\\samples\\simple_demo\\project_vs2017`` ，见 ``README.md`` 说明。
